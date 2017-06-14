@@ -7,6 +7,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+import { AgmCoreModule } from 'angular2-google-maps/core';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -14,7 +16,8 @@ import { HomePage } from '../pages/home/home';
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AgmCoreModule.forRoot({ apiKey: 'AIzaSyAq6gUruvFYnZNNoI-acEcvIJ3KBr7Qx-g'})
   ],
   bootstrap: [IonicApp],
   entryComponents: [
